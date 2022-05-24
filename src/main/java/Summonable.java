@@ -8,6 +8,13 @@ public abstract class Summonable {
     protected Rarity rarity;
     protected boolean rateUp;
 
+    public Summonable(int id, String name, Rarity rarity, boolean rateUp) {
+        this.name = name;
+        this.id = id;
+        this.rarity = rarity;
+        this.rateUp = rateUp;
+    }
+
     public String getName() {
         return name;
     }
