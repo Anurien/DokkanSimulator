@@ -36,7 +36,7 @@ public class DbConnection {
     }
 
     /**
-     * Permite retornar la conexión
+     * Permite retornar la conexión con Singleton
      */
     public static Connection getInstance() {
         if (connection == null) new DbConnection();
