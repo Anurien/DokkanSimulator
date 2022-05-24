@@ -10,8 +10,8 @@ public class MenuPrincipal extends JFrame {
      */
     public MenuPrincipal() {
         /*
-         * Creamos botones para iniciar el juego, le ponemos dimensiones
-         * y un listener para registrar cuando es pulsado
+         * Creamos botones para iniciar el menu, le ponemos dimensiones
+         *
          * */
         help = new JButton(new ImageIcon("src/resources/ayuda.png"));
         help.setBounds(7, 655, 51, 52);
