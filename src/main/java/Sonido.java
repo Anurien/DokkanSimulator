@@ -21,6 +21,21 @@ public class Sonido {
             clip.start();
         }
     }
+    public void stop() {
+        if (clip != null && clip.isRunning()) {
+            clip.stop();
+            clip.flush();
+            dispose();
+        }
+    }
+
+    public void dispose() {
+        try {
+            clip.close();
+        } finally {
+            clip = null;
+        }
+    }
 
     public static void reproducirSonido(String nombreSonido) {
         try {
