@@ -14,6 +14,7 @@ public class MenuPrincipal extends JFrame {
     JFrame frameMenu = new JFrame(" Dokkan Battle ");
     JFrame frameAyuda = new JFrame("Ayuda");
     JFrame frameHistorial = new JFrame("Historial");
+
     /*
      * Constructor
      */
@@ -25,7 +26,6 @@ public class MenuPrincipal extends JFrame {
         help = new JButton(new ImageIcon("src/resources/ayuda.png"));
         help.setBounds(7, 655, 51, 52);
         help.addActionListener(new HelpButton());
-
 
 
         summon1 = new JButton(new ImageIcon());
@@ -111,9 +111,26 @@ public class MenuPrincipal extends JFrame {
     private class ButtonSonido implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            Sonido s = new Sonido();
+            if (e.getSource() == sonido) {
+                if (s.isPlaying()) {
+                    s.dispose();
+                } else {
+                    try {
+                        s.play("src/resources/app_src_main_res_raw_dokkan_theme_audio.wav");
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    } catch (LineUnavailableException ex) {
+                        ex.printStackTrace();
+                    } catch (UnsupportedAudioFileException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
         }
+
     }
+
 
     private static class SummonListener implements ActionListener {
 
@@ -144,7 +161,6 @@ public class MenuPrincipal extends JFrame {
             frameAyuda.setVisible(true);
         }
     }
-
 
 
     private class ScoreButton implements ActionListener {
