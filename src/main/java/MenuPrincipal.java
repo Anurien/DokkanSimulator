@@ -82,7 +82,7 @@ public class MenuPrincipal extends JFrame {
         frameMenu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         try {
-            Sonido.play("src/resources/app_src_main_res_raw_dokkan_theme_audio.wav");
+            Sonido.play("src/resources/Music/app_src_main_res_raw_dokkan_theme_audio.wav");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (LineUnavailableException e) {
@@ -117,7 +117,7 @@ public class MenuPrincipal extends JFrame {
                     s.dispose();
                 } else {
                     try {
-                        s.play("src/resources/app_src_main_res_raw_dokkan_theme_audio.wav");
+                        s.play("src/resources/Music/app_src_main_res_raw_dokkan_theme_audio.wav");
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     } catch (LineUnavailableException ex) {
