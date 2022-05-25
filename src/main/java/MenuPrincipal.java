@@ -1,5 +1,6 @@
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -51,6 +52,8 @@ public class MenuPrincipal extends JFrame {
         panelMenu.setOpaque(false);
         panelMenu.setLayout(null);
         panelMenu.setBounds(0, 0, 435, 778);
+        Panelpaint imagen = new Panelpaint();
+        panelMenu.add(imagen);
         panelMenu.add(summon1);
         panelMenu.add(help);
         panelMenu.add(score);
@@ -76,6 +79,22 @@ public class MenuPrincipal extends JFrame {
         frameMenu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
     }
+
+    public class Panelpaint extends JPanel {
+        public void paintComponent(Graphics g) {
+            ImageIcon icon = new ImageIcon("src/resources/menuWallpaper1.png");
+            g.drawImage(icon.getImage(), 0, 0, frameMenu.getWidth(), frameMenu.getHeight(), null);
+            if (g instanceof Graphics2D) {
+                Graphics2D g2 = (Graphics2D) g;
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                        RenderingHints.VALUE_ANTIALIAS_ON);
+
+                setOpaque(true);
+                super.paintChildren(g);
+            }
+        }
+    }
+
     private class ButtonSonido implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
