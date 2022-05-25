@@ -36,8 +36,9 @@ public class Sonido {
             clip = null;
         }
     }
+    //Este método de momento no lo usaríamos
 
-    public static void reproducirSonido(String nombreSonido) {
+    /*public static void reproducirSonido(String nombreSonido) {
         try {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(nombreSonido).getAbsoluteFile());
             Clip clip = AudioSystem.getClip();
@@ -46,5 +47,5 @@ public class Sonido {
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
             System.out.println("Error al reproducir el sonido.");
         }
-    }
+    }*/
 }
