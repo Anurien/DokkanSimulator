@@ -8,6 +8,19 @@ public class Sonido {
     public Sonido() {
 
     }
+    public boolean isPlaying() {
+        return clip != null && clip.isRunning();
+    }
+
+    public static void play(String nombreSonido) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
+
+        if (clip == null || !clip.isRunning()) {
+            clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(new File(nombreSonido).getAbsoluteFile()));
+            clip.setFramePosition(0);
+            clip.start();
+        }
+    }
 
     public static void reproducirSonido(String nombreSonido) {
         try {
