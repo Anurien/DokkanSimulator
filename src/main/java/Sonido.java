@@ -3,6 +3,11 @@ import java.io.File;
 import java.io.IOException;
 
 public class Sonido {
+    private static Clip clip;
+
+    public Sonido() {
+
+    }
 
     public static void reproducirSonido(String nombreSonido) {
         try {
