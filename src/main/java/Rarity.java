@@ -1,3 +1,3 @@
-public class Rarity {
-
+public enum Rarity {
+    SSR, SR, R
 }

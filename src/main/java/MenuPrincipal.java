@@ -14,6 +14,7 @@ public class MenuPrincipal extends JFrame {
     JFrame frameMenu = new JFrame(" Dokkan Battle ");
     JFrame frameAyuda = new JFrame("Ayuda");
     JFrame frameHistorial = new JFrame("Historial");
+
     /*
      * Constructor
      */
@@ -81,7 +82,7 @@ public class MenuPrincipal extends JFrame {
         frameMenu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         try {
-            Sonido.play("src/resources/app_src_main_res_raw_dokkan_theme_audio.wav");
+            Sonido.play("src/main/resources/Music/app_src_main_res_raw_dokkan_summon_theme_audio.wav");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (LineUnavailableException e) {
@@ -145,7 +146,6 @@ public class MenuPrincipal extends JFrame {
     }
 
 
-
     private class ScoreButton implements ActionListener {
 
         public void actionPerformed(ActionEvent event) {
@@ -155,7 +155,6 @@ public class MenuPrincipal extends JFrame {
             panelMenu.setOpaque(false);
             panelMenu.setLayout(null);
             panelMenu.setBounds(0, 0, 435, 778);
-
 
             frameHistorial.add(panelMenu);
             frameHistorial.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

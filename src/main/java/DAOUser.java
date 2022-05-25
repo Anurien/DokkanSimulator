@@ -18,7 +18,7 @@ public class DAOUser {
 
         try {
 
-            connect = DbConnection.getInstance();
+            connect = DbConnection.getInstance().getConnection();
 
             PreparedStatement psUser = connect.prepareStatement("INSERT INTO Usuario(nomUsuario, conUsuario) VALUES(?,?)");
             psUser.setString(1, u.getName());
@@ -32,6 +32,7 @@ public class DAOUser {
         }
 
     }
+
     /**
      * Actualiza los datos del usuario en la base de datos
      *
@@ -43,7 +44,7 @@ public class DAOUser {
 
         try {
 
-            connect = DbConnection.getInstance();
+            connect = DbConnection.getInstance().getConnection();
 
             PreparedStatement platform = connect.prepareStatement("UPDATE Usuario SET nomUsuario=?,conUsuario=? WHERE idUsuario=?");
             platform.setString(1, u.getName());
@@ -54,7 +55,7 @@ public class DAOUser {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-           DbConnection.desconectar();
+            DbConnection.desconectar();
         }
     }
 

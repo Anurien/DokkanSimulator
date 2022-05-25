@@ -11,7 +11,8 @@ public class DbConnection {
     private static final String password = "Nuria21.";
     private static final String url = "jdbc:mysql://localhost/" + bd;
 
-    static Connection connection = null;
+    private static Connection connection = null;
+    private static DbConnection instance;
 
     /**
      * Constructor de DbConnection
@@ -38,8 +39,12 @@ public class DbConnection {
     /**
      * Permite retornar la conexión con Singleton
      */
-    public static Connection getInstance() {
-        if (connection == null) new DbConnection();
+    public static DbConnection getInstance() {
+        if (instance == null)
+            instance = new DbConnection();
+        return instance;
+    }
+    public Connection getConnection(){
         return connection;
     }
 
