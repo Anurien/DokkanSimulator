@@ -24,7 +24,6 @@ public class MenuPrincipal extends JFrame {
         help.addActionListener(new HelpButton());
 
 
-
         summon1 = new JButton(new ImageIcon());
         summon1.setBounds(130, 520, 159, 110);
         summon1.addActionListener(new SummonListener());
