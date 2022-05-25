@@ -1,8 +1,11 @@
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.io.IOException;
 
 
 public class MenuPrincipal extends JFrame {
@@ -50,6 +53,8 @@ public class MenuPrincipal extends JFrame {
         panelMenu.setOpaque(false);
         panelMenu.setLayout(null);
         panelMenu.setBounds(0, 0, 435, 778);
+        Panelpaint imagen = new Panelpaint();
+        panelMenu.add(imagen);
         panelMenu.add(summon1);
         panelMenu.add(help);
         panelMenu.add(score);
@@ -61,6 +66,7 @@ public class MenuPrincipal extends JFrame {
          * a final de pagina.
          * */
         frameMenu.add(panelMenu);
+        frameMenu.add(imagen);
 
         /*
          *  Asignamos tamaño de la ventana
@@ -74,7 +80,33 @@ public class MenuPrincipal extends JFrame {
         frameMenu.setResizable(false);
         frameMenu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+        try {
+            Sonido.play("src/resources/app_src_main_res_raw_dokkan_theme_audio.wav");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        }
+
     }
+
+    public class Panelpaint extends JPanel {
+        public void paintComponent(Graphics g) {
+            ImageIcon icon = new ImageIcon("src/resources/menuWallpaper1.png");
+            g.drawImage(icon.getImage(), 0, 0, frameMenu.getWidth(), frameMenu.getHeight(), null);
+            if (g instanceof Graphics2D) {
+                Graphics2D g2 = (Graphics2D) g;
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                        RenderingHints.VALUE_ANTIALIAS_ON);
+
+                setOpaque(true);
+                super.paintChildren(g);
+            }
+        }
+    }
+
     private class ButtonSonido implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
