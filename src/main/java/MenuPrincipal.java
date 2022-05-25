@@ -1,9 +1,11 @@
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.io.IOException;
 
 
 public class MenuPrincipal extends JFrame {
@@ -78,6 +80,16 @@ public class MenuPrincipal extends JFrame {
         frameMenu.setVisible(true);
         frameMenu.setResizable(false);
         frameMenu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        try {
+            Sonido.play("src/resources/app_src_main_res_raw_dokkan_theme_audio.wav");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        }
 
     }
 
