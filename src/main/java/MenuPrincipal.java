@@ -65,6 +65,7 @@ public class MenuPrincipal extends JFrame {
          * a final de pagina.
          * */
         frameMenu.add(panelMenu);
+        frameMenu.add(imagen);
 
         /*
          *  Asignamos tamaño de la ventana
