@@ -1,3 +1,5 @@
+package DataBase;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6,15 +8,15 @@ public class DbConnection {
     /**
      * Parametros de conexion
      */
-    private static final String bd = "manual";
+    private static final String bd = "registro";
     private static final String login = "root";
-    private static final String password = "Nuria21.";
+    private static final String password = "oracle123";
     private static final String url = "jdbc:mysql://localhost/" + bd;
 
     static Connection connection = null;
 
     /**
-     * Constructor de DbConnection
+     * Constructor de DataBase.DbConnection
      */
     private DbConnection() {
         try {
