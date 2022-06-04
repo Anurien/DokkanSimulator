@@ -1,3 +1,5 @@
+package DataBase;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,7 +16,7 @@ public class DbConnection {
     static Connection connection = null;
 
     /**
-     * Constructor de DbConnection
+     * Constructor de DataBase.DbConnection
      */
     private DbConnection() {
         try {
