@@ -1,7 +1,10 @@
+package DataBase;
+
+import Simulador.Rarity;
 import javax.swing.*;
 import java.util.Objects;
 
-public abstract class Summonable {
+public class Summonable {
     protected String name;
     protected int id;
     protected ImageIcon icon;
