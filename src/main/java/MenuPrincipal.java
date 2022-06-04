@@ -146,7 +146,6 @@ public class MenuPrincipal extends JFrame {
         }
     }
 
-
     public void closeIntro() {
         frameMenu.dispose();
         frameAyuda.dispose();
