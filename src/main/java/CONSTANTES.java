@@ -1,9 +1,10 @@
+package Simulador;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CONSTANTES {
     public static final int HUNDRED = 100;
-    public static final double CASH_PER_SINGLE_SUMMON = 2.35714;
+   // public static final double CASH_PER_SINGLE_SUMMON = 2.35714;
 
     public static final int RATE_UP_CHANCE = 70;
 

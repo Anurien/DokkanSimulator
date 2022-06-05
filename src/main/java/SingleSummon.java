@@ -1,3 +1,6 @@
+package Simulador;
+import DataBase.Summonable;
+
 import java.util.Random;
 
 public class SingleSummon {

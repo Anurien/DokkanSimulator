@@ -1,3 +1,6 @@
+package Simulador;
+import DataBase.Rarity;
+import DataBase.Summonable;
 
 import java.util.ArrayList;
 import java.util.List;
