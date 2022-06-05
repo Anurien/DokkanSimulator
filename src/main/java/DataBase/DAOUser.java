@@ -13,49 +13,11 @@ import java.util.ArrayList;
 
 public class DAOUser {
 
-    /*
-     * Método JudgeAdmin ()
-     * Juzgue si la ID de usuario y la contraseña son correctas, si es correcta, muestra el inicio de sesión exitoso
-     * Si está mal, aparecerá una ventana emergente para mostrar la cuenta o contraseña incorrecta
+
+    /**
+     * Metodo que recibe un usuario extrae su id y lo elimina de la base de datos
+     * @param user Uruario que se quiere eliminar
      */
-    public boolean login(User user) {
-
-        String sql = "select * from usuario where id=? and conUsuario=?";
-
-        int ans = 0;
-        Connection conn = null;
-        try {
-            conn = new DbConnection().getConnection();
-
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, user.getID());
-            ps.setString(2, user.getPassword());
-            ResultSet rs = ps.executeQuery();
-
-            if (rs.next()) {
-                ans = 1;
-            }
-            //rs.close();
-            //ps.close();
-            //conn.close();
-
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-            e.getMessage();
-        } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (ans == 1) {
-            return true;
-        } else return false;
-
-    }
-
     public void delete(User user) {
         Connection conn = null;
 
@@ -85,8 +47,12 @@ public class DAOUser {
         }
 
     }
-
-    // Agregar cuenta de administrador a la base de datos
+    /**
+     * Metodo que inserta el id, nombre y contraseña de un usuario en la base de datos
+     * @param u usuario que se quiere introducir en la base de datos
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
     public void addUser(User u) throws ClassNotFoundException, SQLException {
         String sql = "insert into usuario (id, nomUsuario, conUsuario) values (?,?,?)";
         Connection conn = null;
@@ -112,7 +78,12 @@ public class DAOUser {
         }
 
     }
-
+    /**
+     * Metodo que devuelve un usuario de la base de datos
+     * con el id introducido
+     * @param id identificador de un usuario
+     * @return usuario recogido de la base de datos
+     */
     public User getU(String id) {
         User u = null;
         ResultSet result;
@@ -140,7 +111,11 @@ public class DAOUser {
         return u;
 
     }
-
+    /**
+     * Metodo para iniciar sesion
+     * @param userName Nombre del usuario a buscar en la base de datos
+     * @return Los datos del usuario con el id más alto (último insert) que tenga el nombre introducido por parámetro
+     */
     public User getRegister(String userName) {
         User u = null;
         ResultSet result;

@@ -3,7 +3,7 @@ package DataBase;
 
 import DataBase.DbConnection;
 import DataBase.Summonable;
-import Simulador.Contador;
+
 
 import javax.swing.*;
 import java.sql.*;
@@ -75,7 +75,11 @@ public class DAOSummonable {
         }
     }
 
-
+    /**
+     * Metodo que recoge las cartas asociadas al usuario introducido
+     * @param u usuario del que se quieren recoger datos
+     * @return cartas del usuario
+     */
     public String[][] get(User u) {
 
         String[][] userScoreTable = new String[150][3];
@@ -110,7 +114,12 @@ public class DAOSummonable {
         return userScoreTable;
 
     }
-
+    /**
+     * Recibe un id y comprueba si existe en la base de datos devuelve un true o un false
+     * @param id identificador de carta
+     * @return boolean comprobador
+     * @throws SQLException
+     */
     public boolean getId(int id) throws SQLException {
         ResultSet res;
         Connection conn = null;
