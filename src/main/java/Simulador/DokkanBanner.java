@@ -1,8 +1,6 @@
 package Simulador;
 
 import DataBase.*;
-import Simulador.MultiSummon;
-import Simulador.SingleSummon;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
