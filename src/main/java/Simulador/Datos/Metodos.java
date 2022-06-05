@@ -1,4 +1,4 @@
-package Simulador;
+package Simulador.Datos;
 
 import DataBase.DAOSummonable;
 import DataBase.DAOUser;

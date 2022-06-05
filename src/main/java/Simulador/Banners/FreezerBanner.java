@@ -1,4 +1,4 @@
-package Simulador;
+package Simulador.Banners;
 
 import DataBase.Rarity;
 import DataBase.Summonable;

@@ -1,6 +1,7 @@
-package Simulador;
+package Simulador.Summons;
 
 import DataBase.Summonable;
+import Simulador.Datos.CONSTANTES;
 
 import java.util.Random;
 

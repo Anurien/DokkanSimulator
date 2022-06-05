@@ -1,7 +1,10 @@
-package Simulador;
+package Simulador.Interfaz;
 
 import DataBase.*;
-
+import Simulador.Datos.Metodos;
+import Simulador.Summons.MultiSummon;
+import Simulador.Summons.SingleSummon;
+import Sonido.Sonido;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;

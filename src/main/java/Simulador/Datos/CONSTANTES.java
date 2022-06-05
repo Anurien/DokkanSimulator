@@ -1,4 +1,7 @@
-package Simulador;
+package Simulador.Datos;
+
+import Simulador.Banners.FreezerBanner;
+import Simulador.Banners.GokuBanner;
 
 import java.util.ArrayList;
 import java.util.List;

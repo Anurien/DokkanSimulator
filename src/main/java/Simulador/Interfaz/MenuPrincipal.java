@@ -1,6 +1,7 @@
-package Simulador;
+package Simulador.Interfaz;
 
 import DataBase.User;
+import Simulador.Datos.Metodos;
 import Sonido.Sonido;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -49,7 +50,7 @@ public class MenuPrincipal extends JFrame {
         score.setContentAreaFilled(false);
         score.addActionListener(new ScoreButton());
 
-        sonido = new JButton(new ImageIcon("src/resources/Assets/mute.png"));
+        sonido = new JButton(new ImageIcon("src/main/resources/Assets/mute.png"));
         sonido.setBounds(12, 50, 51, 52);
         sonido.setOpaque(false);
         sonido.setContentAreaFilled(false);

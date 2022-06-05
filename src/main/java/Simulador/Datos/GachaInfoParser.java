@@ -1,6 +1,8 @@
-package Simulador;
+package Simulador.Datos;
 
 import DataBase.Rarity;
+import Simulador.Banners.FreezerBanner;
+import Simulador.Banners.GokuBanner;
 
 import java.io.File;
 import java.util.Scanner;

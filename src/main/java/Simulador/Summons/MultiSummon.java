@@ -1,7 +1,9 @@
-package Simulador;
+package Simulador.Summons;
 
 import DataBase.Rarity;
 import DataBase.Summonable;
+import Simulador.Banners.FreezerBanner;
+import Simulador.Banners.GokuBanner;
 
 import java.util.ArrayList;
 import java.util.List;
