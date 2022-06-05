@@ -1,3 +1,5 @@
+package Simulador;
+
 import javax.swing.*;
 
 public class GokuBanner extends Summonable {
