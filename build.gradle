@@ -12,6 +12,10 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation(files("C:\\Users\\magic\\IdeaProjects\\DataBaseLibreria\\out\\artifacts\\DataBaseLibreria_jar\\DataBaseLibreria.jar"))
+    implementation(files("C:\\Users\\magic\\IdeaProjects\\SonidoLibreria\\out\\artifacts\\SonidoLibreria_jar\\SonidoLibreria.jar"))
 }
 
 test {
