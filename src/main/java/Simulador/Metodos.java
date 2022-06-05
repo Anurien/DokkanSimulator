@@ -1,5 +1,9 @@
-package DataBase;
+package Simulador;
 
+import DataBase.DAOSummonable;
+import DataBase.DAOUser;
+import DataBase.Summonable;
+import DataBase.User;
 import Simulador.MenuPrincipal;
 import Simulador.Rarity;
 
@@ -26,7 +30,8 @@ public class Metodos {
         DAOUser login = new DAOUser();
         DAOSummonable daoSummonable = new DAOSummonable();
         login.delete(u);
-        //daoSummonable.delete(u);
+        daoSummonable.delete(u);
+        JOptionPane.showMessageDialog(null,"usuario eliminado");
         return null;
     }
 
