@@ -15,7 +15,7 @@ dependencies {
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     implementation 'mysql:mysql-connector-java:8.0.29'
     implementation(files("C:\\Users\\magic\\IdeaProjects\\DataBaseLibreria\\out\\artifacts\\DataBaseLibreria_jar\\DataBaseLibreria.jar"))
-
+    implementation(files("C:\\Users\\magic\\IdeaProjects\\SonidoLibreria\\out\\artifacts\\SonidoLibreria_jar\\SonidoLibreria.jar"))
 }
 
 test {
