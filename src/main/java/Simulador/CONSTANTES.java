@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CONSTANTES {
+    //Clase de constantes para el calculo de probabilidad de que salgan las cartas al invocarlas
     public static final int HUNDRED = 100;
     public static final double CASH_PER_SINGLE_SUMMON = 2.35714;
 
