@@ -4,14 +4,12 @@ import DataBase.DAOSummonable;
 import DataBase.DAOUser;
 import DataBase.Summonable;
 import DataBase.User;
-import Simulador.MenuPrincipal;
-import Simulador.Rarity;
+import DataBase.Rarity;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
-import javax.swing.table.TableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,12 +1,12 @@
 package Simulador;
 
+import DataBase.Rarity;
 import DataBase.Summonable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Multisummon {
-
+public class MultiSummon {
     private List<Summonable> summonResults;
     private List<Summonable> summonResults2;
     private SingleSummon singleSummon;
@@ -25,16 +25,15 @@ public class Multisummon {
     public List<Summonable> summon() {
         summonResults.clear();
         boolean SRSummoned = false;
-        boolean ServantSummoned = false;
+        boolean pjSummoned = false;
         for (int i = 0; i < 9; i++) {
             Summonable summoned = singleSummon.summon();
             summonResults.add(summoned);
-            //para estadisticas
             if (summoned.getRarity() == Rarity.SSR || summoned.getRarity() == Rarity.SR) {
                 SRSummoned = true;
             }
             if (summoned instanceof GokuBanner) {
-                ServantSummoned = true;
+                pjSummoned = true;
             }
         }
 
@@ -44,7 +43,7 @@ public class Multisummon {
                 summoned = singleSummon.summon();
             } while (summoned.getRarity() == Rarity.R);
             summonResults.add(summoned);
-        } else if (!ServantSummoned) {
+        } else if (!pjSummoned) {
             Summonable summoned;
             do {
                 summoned = singleSummon.summon();
@@ -89,5 +88,3 @@ public class Multisummon {
         return summonResults2;
     }
 }
-
-

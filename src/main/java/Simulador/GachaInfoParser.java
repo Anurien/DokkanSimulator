@@ -1,5 +1,7 @@
 package Simulador;
 
+import DataBase.Rarity;
+
 import java.io.File;
 import java.util.Scanner;
 

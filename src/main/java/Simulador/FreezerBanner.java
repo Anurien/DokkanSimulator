@@ -1,3 +1,7 @@
+package Simulador;
+
+import DataBase.Rarity;
+import DataBase.Summonable;
 
 import javax.swing.*;
 
