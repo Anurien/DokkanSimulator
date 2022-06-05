@@ -70,8 +70,8 @@ A continuación dejamos las librerías utilizadas para este proyecto y algún en
 <details>
 <summary>Librerías</summary>
 <p></p>
-<p><a href="https://github.com/SrMagdalena13/BoletinesProgramacion/tree/master/src/com/programaci%C3%B3n/TerceraEvaluacion/Boletin26">Librería Base de Datos</a> </p>
-<p><a href="https://github.com/SrMagdalena13/BoletinesProgramacion/tree/master/src/com/programaci%C3%B3n/TerceraEvaluacion/Boletin27">Librería de Sonido</a> </p>
+<p><a href="https://github.com/GorillaGrip/DokkanSimulator/releases/tag/Libreria_BD_1.0">Librería Base de Datos</a> </p>
+<p><a href="https://github.com/GorillaGrip/DokkanSimulator/releases/tag/Libreria_Sonido_1.0">Librería de Sonido</a> </p>
 <p><a href="https://dbz-dokkanbattle.fandom.com/wiki/Dragon_Ball_Z_Dokkan_Battle_Wiki">Página Wiki Dokkan Battle</a> </p>
 </details>
 
