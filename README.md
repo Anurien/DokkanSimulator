@@ -27,35 +27,35 @@ El proyecto ya contiene un conector jdbc con Java.
 
 El juego dispone de una opción de registro de usuario e inicio de sesión para que el jugador, pueda tener guardadas sus propias cartas en caso de que varias personas hagan uso de la misma aplicación.
 
-![Dokkan](Readme\d2.png)
+![Dokkan1](Readme\d2.png)
 
 <h3>2. Música<h3/>
 El juego consta con las canciones originales del juego Dragon Ball Z Dokkan Battle, tanto la música de menú de inicio como la música del menú de invocaciones.
 Con opción de mute, para cuando no quieras escucharla!
 
-![Dokkan](Readme\d1.png)
+![Dokkan2](Readme\d1.png)
 
 <h3>3. Historial<h3/>
 Aquí podrás encontrar un historial en forma de tabla, personalizada con la temática del juego, como no, para poder ver las cartas que has conseguido!
 
-![Dokkan](Readme\d4.png)
+![Dokkan3](Readme\d4.png)
 
 
 <h3>4. Menú de Summons<h3/>
 Lo principal y más importante del proyecto. En este menú tendrás acceso a hacer invocaciones a las cartas anteriormente mencionadas. Todo esto de manera gratuita! Sin necesidad de meter ninguna clase de dinero a diferencia del juego original.
 Su funcionalidad es emular el gachapón pero sin gastar ningún dinero para que puedas hacerlo todas las veces que quieras.
 
-![Dokkan](Readme\d5.png)
+![Dokkan4](Readme\d5.png)
 
 Puedes elegir entre dos exclusivos banners de cartas y en cada uno, tienes la opción de hacer una invocación de manera individual, en la que obtendrás una sola carta o de manera colectiva, en la que obtendrás nada menos que 10 exclusivas cartas del banner!
 
-![Dokkan](Readme\d6.png)
-![Dokkan](Readme\d7.png)
+![Dokkan5](Readme\d6.png)
+![Dokkan6](Readme\d7.png)
 
 <h3>5. Borrado<h3/>
 Para quien lo desee, se ha incorporado una opción de borrado tanto de usuario como de todo lo que esté relacionado con él, incluido el historial.
 
-![Dokkan](Readme\d3.png)
+![Dokkan7](Readme\d3.png)
 
 #Finalidad del Proyecto
 
