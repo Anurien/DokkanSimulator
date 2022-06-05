@@ -21,7 +21,7 @@ public class Metodos {
     static JFrame frameHistorial;
 
     /**
-     * Elimina los datos del usuario (incluidadlas puntuaciones) de la base de datos
+     * Elimina los datos del usuario (incluidadlas cartas) de la base de datos
      *
      * @param u El usuario a eliminar.
      * @return Devuelve null.
@@ -34,7 +34,12 @@ public class Metodos {
         JOptionPane.showMessageDialog(null,"usuario eliminado");
         return null;
     }
-
+    /**
+     * Metodo que inicia sesion en el juego
+     * @param id identificador del usuario
+     * @param password contraseña del usuario
+     * @return
+     */
     public static User login(String id, String password) {
 
         DAOUser daoUser = new DAOUser();
@@ -54,8 +59,13 @@ public class Metodos {
             return null;
         }
     }
-
-
+    /**
+     * Metodo que registra a un usuario en la base de datos
+     * @param id identificador del usuario
+     * @param username nombre del usuario
+     * @param password contraseña del usuario
+     * @return id del usuario
+     */
     public static User register(String id, String username, String password) {
 
         DAOUser daoUser = new DAOUser();
@@ -73,7 +83,16 @@ public class Metodos {
 
     }
 
-
+    /**
+     * Metodo que guarda o actualiza cartas en la base de datos
+     * de un usuario en concreto
+     * @param id identificador de carta
+     * @param nombre nombre de la carta
+     * @param icon icono de la carta
+     * @param rareza rareza de la carta
+     * @param cantidad numero de cartas
+     * @param idu identificador de usuario
+     */
     public static void saveScore(int id, String nombre, ImageIcon icon, Rarity rareza, int cantidad, String idu) {
 
         DAOSummonable daoSummonable = new DAOSummonable();
@@ -91,12 +110,11 @@ public class Metodos {
         }
 
     }
-
-    public static void updateScore(int id, String nombre, ImageIcon icon, Rarity rareza, int cantidad, String idu) {
-        DAOSummonable daoSummonable = new DAOSummonable();
-
-    }
-
+    /**
+     * metodo que recoge datos de cartas y las mete en una tabla
+     * @param u usuario
+     * @param close boton
+     */
     public static void mostrarTabla(User u, JButton close) {
 
         DAOSummonable daoSummonable = new DAOSummonable();
@@ -107,7 +125,13 @@ public class Metodos {
         tabla(cartasTabla, columns, u, close);
 
     }
-
+    /**
+     * Metodo que muestra en pantalla una tabla de cartas
+     * @param data datos de la tabla
+     * @param columns nombre de las columnas
+     * @param u usuario
+     * @param close boton de cerrar
+     */
     private static void tabla(String[][] data, String[] columns, User u, JButton close) {
         close = new JButton(new ImageIcon("src/resources/Assets/close.png"));
         close.addActionListener(new CloseScore());
@@ -169,6 +193,9 @@ public class Metodos {
         frameHistorial.dispose();
     }
 
+    /**
+     * Clase con metodos para poner fondo a la tabla de cartas
+     */
     private static class CeldalRenderer extends DefaultTableCellRenderer {
 
         public CeldalRenderer() {
@@ -192,6 +219,9 @@ public class Metodos {
         }
     }
 
+    /**
+     * Clase y metodo que pinta una imagen en el fondo del JPanel
+     */
     public static class Panelpaint3 extends JPanel {
         public void paintComponent(Graphics g) {
             ImageIcon icon = new ImageIcon("src/resources/Assets/dokkan_summon_background.png");
