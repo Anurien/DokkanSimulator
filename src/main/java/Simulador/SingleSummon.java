@@ -14,7 +14,12 @@ public class SingleSummon {
         summonResult2 = null;
         random = new Random();
     }
-
+    /**
+     * Metodo que dependiendo de la rareza recoge las probabilidades de
+     * la clase de constantes, utiliza un random y devuelve objeto
+     * un personaje.
+     * @return objeto de carta
+     */
     public Summonable summon() {
         summonResult = null;
 
