@@ -17,6 +17,11 @@ public class Multisummon {
         singleSummon = new SingleSummon();
     }
 
+    /**
+     * Metodo que recibe los resultados del singlesummon
+     * los mete en un bucle y saca los resultados en un array
+     * @return Array de cartas
+     */
     public List<Summonable> summon() {
         summonResults.clear();
         boolean SRSummoned = false;

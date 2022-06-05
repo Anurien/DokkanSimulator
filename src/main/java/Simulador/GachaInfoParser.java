@@ -11,7 +11,10 @@ public class GachaInfoParser {
         GokuData = new Scanner(new File(Goku));
         FreezerData = new Scanner(new File(Freezer));
     }
-
+    /**
+     * Metodo que lee un fichero txt y extrae los datos de
+     * las cartas y los guarda en un array.
+     */
     public void parse() {
         while (GokuData.hasNextLine()) {
             String[] info = GokuData.nextLine().split("/");

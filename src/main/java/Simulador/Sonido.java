@@ -14,6 +14,13 @@ public class Sonido {
         return clip != null && clip.isRunning();
     }
 
+    /**
+     * Metodo que reproduce la musica
+     * @param nombreSonido ruta donde esta el audio
+     * @throws IOException
+     * @throws LineUnavailableException
+     * @throws UnsupportedAudioFileException
+     */
     public static void play(String nombreSonido) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
 
         if (clip == null || !clip.isRunning()) {
@@ -23,6 +30,9 @@ public class Sonido {
             clip.start();
         }
     }
+    /**
+     * Metodo que para la musica
+     */
     public void stop() {
         if (clip != null && clip.isRunning()) {
             clip.stop();
@@ -30,7 +40,9 @@ public class Sonido {
             dispose();
         }
     }
-
+    /**
+     * Metodo que cierra la musica
+     */
     public void dispose() {
         try {
             clip.close();
@@ -38,16 +50,5 @@ public class Sonido {
             clip = null;
         }
     }
-    //Este método de momento no lo usaríamos
 
-    /*public static void reproducirSonido(String nombreSonido) {
-        try {
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(nombreSonido).getAbsoluteFile());
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start();
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
-            System.out.println("Error al reproducir el sonido.");
-        }
-    }*/
 }
